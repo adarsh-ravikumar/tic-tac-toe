@@ -1,0 +1,95 @@
+@keyframes fadeIn {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: rgb(247, 247, 247);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    background-color: rgb(247, 247, 247);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes fadeOutEnd {
+  0% {
+    background-color: rgb(247, 247, 247);
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela round", "Seoge UI";
+}
+
+.wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.game-board {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+.space {
+  font-size: 40px;
+  font-family: "Varela round", "Seoge UI";
+  background-color: white;
+  border-radius: 0.5cm;
+  box-shadow: 0px 0px 5px rgb(211, 211, 211);
+  border: none;
+  outline: none;
+
+  animation: fadeOut 0.3s forwards;
+}
+
+.fadeOut
+{
+  animation: fadeOutEnd 0.7s forwards;
+}
+
+.space:hover {
+  animation: fadeIn 0.3s forwards;
+}
+
+.score {
+  margin-top: 20px;
+}
+
+.x {
+  float: left;
+  color: rgb(247, 74, 74);
+}
+
+.o {
+  float: right;
+  color: rgb(80, 80, 245);
+}
+
+.red {
+  color: rgb(247, 74, 74);
+}
+
+.blue {
+  color: rgb(80, 80, 245);
+}
